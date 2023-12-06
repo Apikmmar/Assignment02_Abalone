@@ -18,4 +18,3 @@ Route::get('/', function () {
     return view('testpage');
 });
 
-Route::get('/heartfailureclinicrecord', [HeartFailureDataController::class, 'index']);
