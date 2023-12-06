@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\HeartFailureDataController;
+use App\Http\Controllers\AbaloneController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('testpage');
-});
+Route::resource('/abalonedata', AbaloneController::class);
 
+// Route::get('/abalonedata/filtergender', [AbaloneController::class, 'filterGender']);
+// Route::get('/abalonedata', [AbaloneController::class, 'index']);
+// Route::get('/abalonedata/create', [AbaloneController::class, 'create']);
