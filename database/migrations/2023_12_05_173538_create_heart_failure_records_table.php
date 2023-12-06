@@ -18,15 +18,15 @@ return new class extends Migration
             $table->integer('creatinine_phosphokinase');
             $table->string('diabetes', 3);
             $table->integer('ejection_fraction');
-            $table->integer('high_blood_pressure');
+            $table->string('high_blood_pressure');
             $table->float('platelets');
             $table->float('serum_creatinine');
             $table->integer('serum_sodium');
             $table->string('sex', 5);
             $table->string('smoking', 3);
             $table->integer('time');
-            $table->timestamps();
             $table->string('death_event', 3);
+            $table->timestamps();
         });
     }
 

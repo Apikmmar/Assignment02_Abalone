@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HeartFailureDataController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('testpage');
 });
+
+Route::get('/heartfailureclinicrecord', [HeartFailureDataController::class, 'index']);
