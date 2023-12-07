@@ -13,6 +13,7 @@ class AbaloneTableRecord extends Seeder
      */
     public function run(): void
     {
+        // Generate 100 fake abalone data
         $faker = Faker::create();
         foreach (range(1, 100) as $fakeabalone) {
             DB::table('abalones')->insert([

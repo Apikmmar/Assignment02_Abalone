@@ -9,6 +9,7 @@ class Abalone extends Model
 {
     use HasFactory;
 
+    // Allow insert data into database
     protected $fillable = [
         'sex',
         'length',

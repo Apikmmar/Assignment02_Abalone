@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/abalonedata', [AbaloneController::class, 'index']);
-Route::get('/abalonedata/genderfilter', [AbaloneController::class, 'filterGender']);
-Route::get('/abalonedata/ringsfilter', [AbaloneController::class, 'filterRings']);
+Route::get('/abalonedata', [AbaloneController::class, 'index']); // Display all abalone data
+Route::get('/abalonedata/genderfilter', [AbaloneController::class, 'filterGender']); // Filter abalone data based on sex
+Route::get('/abalonedata/ringsfilter', [AbaloneController::class, 'filterRings']); // Filter abalone data based by rings
