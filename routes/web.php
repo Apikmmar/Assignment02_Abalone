@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/abalonedata', AbaloneController::class);
-
-// Route::get('/abalonedata/filtergender', [AbaloneController::class, 'filterGender']);
-// Route::get('/abalonedata', [AbaloneController::class, 'index']);
-// Route::get('/abalonedata/create', [AbaloneController::class, 'create']);
+Route::get('/abalonedata', [AbaloneController::class, 'index']);
+Route::get('/abalonedata/genderfilter', [AbaloneController::class, 'filterGender']);
+Route::get('/abalonedata/ringsfilter', [AbaloneController::class, 'filterRings']);

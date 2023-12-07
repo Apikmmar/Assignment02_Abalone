@@ -18,58 +18,23 @@ class AbaloneController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display a listing of the resource based on gender filter.
      */
+    public function filterGender(Request $request) {
+        $sex = $request->sex;
+        $abalone_data = Abalone::where('sex', $sex)->get();
+
+        return view('index', compact('abalone_data'));
+    }
+
+    /**
+     * Display a listing of the resource based on gender filter.
+     */
+    public function filterRings(Request $request) {
+        $show = $request->show;
+        $abalone_data = Abalone::orderBy('rings', $show)->get();
     
-    public function create()
-    {
-        return view('create');
+        return view('index', compact('abalone_data'));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     * 
-     */
-    public function store(Request $request)
-    {
-        Abalone::create($request->all());
-
-        return redirect('abalonedata');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
-
-    public function filterGender() {
-        return redirect('abalonedata');
-    }
+    
 }

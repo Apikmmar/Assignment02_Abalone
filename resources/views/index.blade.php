@@ -4,9 +4,10 @@
     
 @section('content')
     <div>
-        <div class="row bg-info text-white">
-            <h3 class="fw-bold">VIEW ABALONE DATA</h3>
+        <div class="row">
+            @include('filter')
         </div>
+
         <div class="row justify-content-center bg-light">
             <div>
                 <table class="table text-center">
