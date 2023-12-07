@@ -6,7 +6,7 @@
                     @csrf
                     <label class="fw-bold">Filter by Abalone Sex:</label>
                     <select class="form-select" aria-label="Default select example" name="sex">
-                        <option selected>Sex</option>
+                        <option selected disabled>Sex</option>
                         <option value="M">Male</option>
                         <option value="F">Female</option>
                         <option value="I">Infant</option>
